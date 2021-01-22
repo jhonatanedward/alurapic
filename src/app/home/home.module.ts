@@ -7,12 +7,16 @@ import { RouterModule } from '@angular/router';
 import { SignUpComponent } from './signup/signup.component';
 import { HomeComponent } from './home.component';
 import { HomeRouting } from './home.routing.module';
+import { SignUpService } from './signup/signup.service';
 
 @NgModule({
     declarations: [
         SignInComponent,
         SignUpComponent,
         HomeComponent
+    ],
+    providers:[
+        SignUpService
     ],
     imports:[
         CommonModule,
