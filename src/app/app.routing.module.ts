@@ -5,7 +5,6 @@ import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import {RouterModule, Routes} from '@angular/router';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
-import { AuthGuard } from './core/auth/auth.guard';
 
 const routes : Routes = [
     {
@@ -14,7 +13,8 @@ const routes : Routes = [
         redirectTo: 'home'
     },
     {
-        path: 'home'
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
     },
     {
         path: 'user/:userName', 
